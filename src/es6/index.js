@@ -1,5 +1,4 @@
 //Esta es la  forma convencional
-//PLANTILLA PARA CREAR UNA PERSONA ECHA CON  PARAMETROS CON UN ARGUMENTO YA DEFINIDO O NO  
 function newFunction(name, age, country){            
     var name = "Chris" || name;
     var age ="32" || age;
@@ -7,9 +6,8 @@ function newFunction(name, age, country){
     console.log(name, age, country);
 }
 
-//es6 Esta es la manera con ecmascript +6
-//PLANTILLA QUE PODEMOS UNSAR QUE FUE AGREGADO EN ES 6
-function newFunction2(name = "", age ="22", country="Mexico"){
+//es6
+function newFunction2(name = " ", age =22, country="Mexico"){
     console.log(name, age, country);
 }
  
@@ -18,60 +16,42 @@ newFunction2('Ricardo', '23', 'España');
 
 
 //Forma convencional
-//ESTA ES LA MANERA CONVENCIONAL DE CONCATENAR DOS CADENAS DE TEXTO
 let hello = "Hellow";
 let world = "World";
 let epicPhrase = hello + " " + world;
 console.log(epicPhrase);
 
 //Con es6
-//ESTA ES LA PROPUESTA DE ES6 PARA CONCATENAR DE UNA MANERA MAS INTUITIVA 
 //LA ESTRUCTURA ES ` ${variables} ${variables}  ` 
-let epicPhrase2 = `${hello} ${world}`;  //Esta es una mejor manera para concatenar elementos
+let epicPhrase2 = `${hello} ${world}`;  
 console.log(epicPhrase2);
 
-//forma convencional
-//ESTRUCTURA PARA DAR UN SALTO DE LINEA USADA ENTES DEL 2016
-let lorem = "La diciplina es lo que queda cuando la motivacion se acaba.\n" + "El efecto conpuesto cambiara tu vida segun tus habitos diarios."
-
-//es6
 //MULTILINEA
-//ESTRUCTURA QUE FUE LANZADA EN 2016 PARA DAR UN SALTO DE LINA DE MANERA MAS INTUITIVA
-/**SOLO BASTARA QUE EL STRING ESTE ADENTRO DE LAS COMILLAS FRANCESAS Y SOLO TENDRAS QUE DAR UN SALTO DE LINEA EN TU CODIGO 
- * Y ESTO ARA QUE EL STRING TAMBIEN TENGA ESE SALTO DE LINEA AL MOMENTO DE SER MOSTRADO EN TU CONSOLA 
-*/
+//forma convencional
+let lorem = "La diciplina es lo que queda cuando la motivacion se acaba.\n" 
++ "El efecto conpuesto cambiara tu vida segun tus habitos diarios."
+//es6
 let lorem2 = `La diciplina es lo que queda cuando la motivacion se acaba.
 El efecto conpuesto cambiara tu vida segun tus habitos diarios.`
-
+//IMPRIMIR EN CONSOLA
 console.log(lorem);
 console.log(lorem2);
 
-/**fonrma convencional 
- * DEFINIMOS Y OBJETOS Y MANDAMOS A LLAMAS A SUS ATRIBUTOS POR MEDIO DE UN CONSOLE.LOG
-*/
+//DESECTRUCTURACION
+//fonrma convencional 
 let person = {
     'name': 'chris',
     'age': 22,
     'country': 'MX'
 };
-
 console.log(person.name, person.country);
-
-/**es6
- * DESECTRUCTURACION
- * CON ESTRA ESTRUCTURA CREAMOS UNA CONSTANTE DEFINIENDO LOS ELEMENTOS DENTRO DE LOS CORCHETES Y DEFINIMOS 
- * EL OBJETO DEL CUAL VAMOS A EXTRAER LOS ELEMENTOS.
- * ESTO NOS SERA DE UTILIDAD A LA HORA DE LLAMAR A LOS ELEMENTOS DE ALGUN ELEMENTO  
- */
+//es6
 let { name, country, age} = person;
-
+//IMPRIMIR EN CONSOLA
 console.log(name, country,age);
 
-/**
- * SPREAD OPERATOR 
- * ESTO ES UNA MENERA DE es6 DE PODER UNIR ARREGLOS DE MANERA MAS SENCILLA CREANDO UN NUEVO ARREGLO
- * PARA ESTO NOS AYUDAN LOS TES PUNTOS SEGUIDOS QUE NOS PERMITE UNIR LOS ARRYAS
- */
+
+//SPREAD OPERATOR 
 let team1 = ['Chris' 'Raul' 'Araceli'];
 let team2 = ['Oswaldo' 'Santiago' 'Mariana'];
 

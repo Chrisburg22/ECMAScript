@@ -51,3 +51,53 @@ const String = 'hello';//Creamos el String
 console.log(String.padStart(7, 'hi'));//Le agregamos don elementos al princiopio del string
 console.log(String.padEnd(12, '-----------'));//Le agregamos elementos al final del string
 console.log('Food'.padEnd (12, '-------'));//Creamos un nuevo string y  le agregamos mas caracteres
+
+/**
+ *
+ */
+/**
+ * Async Await 
+ * Primero crearemos una funcion, dentro de ella crearemos una nueva promesa para posteriormente poder invocarla
+ * Esto oara ver como nos ayudar realmente las promesas con el async awai
+ */
+
+const helloWorld = () =>{
+    return new Promise((resolve, reject) => {
+        (true)
+        ? setTimeout(() => resolve('Hello World'), 3000)//Para utilizar el timeout nesecitamos crear un funcion anonima 
+        : reject(new Error('Test Error'))                            // Despues de eso colocamos el resolve en la funcion y lo segundo son los milisegundos que tardara en imprimir
+    })
+}
+//Con esto definido podremos trabajar con etas async y  await  que son estas funciones que le van a aindicar que se va a compportar
+//de manera destinta de que nosa va a permiter ser mas claro a la Hora de escribir de este tipo de funciones y trabajar mejor cn
+//El asincronistmo
+
+//Creamos una funcion constante y de esta forma vamos a empezar  a identificarlas
+//usaremos la Parabra Async antes de pasarle los argumentos y de esta manera sabes que va a ser una funcion que va a implementar async 
+//y dentro en la logica el await para cada uno de los llamados que vayan a ser necessarios
+const helloAsync = async () => {
+    const hello =await helloWorld (); //De esta forma va a ser el llamado
+    console.log(hello);
+}
+
+helloAsync();
+/**
+ * Otra propuesta es crear otra funcion con la cual vamos atrabajar con el try cactch lo cual va a probar sobre lo que va a 
+ * ejecutar y en dado caso que este tenga un error o un valor que no coincide con logica que estamos haciendo obviamente 
+ * va a caer en un catch y vamos a poder capturar este erro.
+ * De esta manera poder manejar correctamente los errores
+ * PRimero se encapsula dentro del try lo que se va a probar, en dado caso que la logica no se cumple se recupera el error
+ * en el catch
+ * De esta manera podremos manejar cuando tenemos algun error y poder saber que es lo que esta pasando en dado
+ * caso de que este ocurriendo 
+ */
+const anotherAsync = async ()=> {
+    try{
+        const hello = await helloWorld();
+        console.log(hello);
+    } catch(error){
+        console.log(error);
+    }
+}
+anotherAsync ();
+
