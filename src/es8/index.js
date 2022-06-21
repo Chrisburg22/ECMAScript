@@ -82,6 +82,7 @@ const helloAsync = async () => {
 
 helloAsync();
 /**
+ * Optional Catch Binding
  * Otra propuesta es crear otra funcion con la cual vamos atrabajar con el try cactch lo cual va a probar sobre lo que va a 
  * ejecutar y en dado caso que este tenga un error o un valor que no coincide con logica que estamos haciendo obviamente 
  * va a caer en un catch y vamos a poder capturar este erro.
