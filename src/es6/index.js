@@ -59,9 +59,9 @@ let education = ['David', ...team1, ...team2];
 console.log(education);
 
 /**
- * EL FORMATO DE LET ES PARA UTILIZARSE DENTRO DE UN BLOQUE DE COIGO Y SOLO PRDA SER UTILIZADO EN EL BLOCK SCOPE
- * A DIREFENCIA DE VAR QUE SE UTILIZA EN EL SCOPE GLOBAL
- * CONS T NOS AYUDA A DECLARAR UNA CONSTANTE QUE NO PODRA SER MODIFICADA
+ * Este es un ejemplo de que si intentamos mandar a llamar a la variable que fue declarada con let se tiene que  hacer dentro del mismo block scope en el que fue declarada
+ * En cambio con var podemos declararla dentro de un block scope y poder utilizarla fuera del scope en que fue declarado
+ * 
  * */
 {
 let globalLet = "Global Let" ;
@@ -72,18 +72,28 @@ var globalVar = "Global Var";
 }
 console.log(globalVar);
 
+const paises = ['México','Paris','Alemania'];
+console.log(paises);
+paises.push('Argentina');
+console.log(paises);
+
+
 /**
  * PARAMETROS EN OBJETOS
- * ESTOS SON ALGUNAS MANERAS DE CREAR UN OBJETO A PARTIR DE NAS LET YA DECLARADAS
+ * ESTOS SON ALGUNAS MANERAS DE CREAR UN OBJETO A PARTIR DE UNAS LET YA DECLARADAS
  */
 let name3 ='Chris';
 let age3 = 22;
 
 //es5
 obj = { name: name3, age: age3 } ;
+
+console.log(obj);
 //es6
 obj2 = {name3, age3};
 console.log(obj2);
+
+
 
 /**
  * ARROW FUNCTIONS

@@ -3,7 +3,7 @@
 ## Curso de platzi ECMAScript
 
 ## ES6
--  Default Prarams
+-  Default Params
 -  Destructuring
 -  Template Strings
 -  let y const
